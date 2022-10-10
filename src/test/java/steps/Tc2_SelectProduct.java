@@ -2,15 +2,11 @@ package steps;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobject.Product;
 import utility.Initialize;
-import utility.ReportGenertor;
 
 public class Tc2_SelectProduct extends Initialize {
 

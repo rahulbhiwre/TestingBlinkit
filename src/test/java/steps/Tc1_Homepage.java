@@ -2,16 +2,11 @@ package steps;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobject.HomePage;
 import utility.Initialize;
-import utility.ReportGenertor;
-import utility.ScreenshotGenerator;
 
 public class Tc1_Homepage extends Initialize {
 
