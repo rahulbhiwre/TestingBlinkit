@@ -13,17 +13,17 @@ import utility.Initialize;
 import utility.ReportGenertor;
 import utility.ScreenshotGenerator;
 
-public class Tc1_Homepage extends Initialize  {
+public class Tc1_Homepage extends Initialize {
 
 	public static HomePage homePage;
 
+	public Tc1_Homepage() {
+		super();
+	}
+
 	@Given("user is in the blinkit website")
 	public void user_is_in_the_blinkit_website() throws InterruptedException, IOException {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\RBHIWRE\\eclipse-workspace\\blinkit1\\src\\test\\resources\\drivers\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
 		homePage = new HomePage(driver);
-		report = new ReportGenertor();
 		report.startReport();
 		report.startTest("Home page Test");
 		homePage.getWebsite();
@@ -39,6 +39,7 @@ public class Tc1_Homepage extends Initialize  {
 	@Then("user will redirected to homepage")
 	public void user_will_redirected_to_homepage() {
 		report.endTest();
+		driver.quit();
 	}
 
 }

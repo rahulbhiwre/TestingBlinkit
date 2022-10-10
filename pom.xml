@@ -26,7 +26,7 @@
 				</dependencies>
 				<configuration>
 					<includes>
-						<include>src//test//java//runner//TestRunner.java</include>
+						<include>runner//TestRunner.java</include>
 					</includes>
 				</configuration>
 			</plugin>
