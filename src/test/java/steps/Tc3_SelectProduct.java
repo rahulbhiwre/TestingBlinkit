@@ -7,7 +7,7 @@ import java.io.IOException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pageobject.Product;
+import pagefactory.Product;
 import utility.Initialize;
 
 public class Tc3_SelectProduct extends Initialize {
@@ -37,7 +37,6 @@ public class Tc3_SelectProduct extends Initialize {
 		assertEquals(true, result);
 		report.getResult(result);
 		report.endTest();
-		report.endReport();
 		driver.quit();
 	}
 

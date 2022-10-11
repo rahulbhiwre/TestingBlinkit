@@ -7,8 +7,8 @@ import java.io.IOException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pageobject.HomePage;
-import pageobject.Login;
+import pagefactory.HomePage;
+import pagefactory.Login;
 import utility.Initialize;
 
 public class Tc2_Login extends Initialize {
@@ -40,7 +40,7 @@ public class Tc2_Login extends Initialize {
 
 	@Then("user will see login successful message")
 	public void user_will_see_login_successful_message() {
-	    assertEquals("Account", resultText);
+	    assertEquals(resultText,"Account");
 	    report.getResult(resultText, "Account");
 	    report.endTest();
 		driver.quit();

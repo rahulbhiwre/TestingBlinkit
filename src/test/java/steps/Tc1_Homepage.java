@@ -7,7 +7,7 @@ import java.io.IOException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pageobject.HomePage;
+import pagefactory.HomePage;
 import utility.Initialize;
 
 public class Tc1_Homepage extends Initialize {
