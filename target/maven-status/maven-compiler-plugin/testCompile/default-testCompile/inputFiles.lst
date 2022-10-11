@@ -1,8 +1,10 @@
-C:\Users\RBHIWRE\eclipse-workspace\blinkit1\src\test\java\utility\Initialize.java
-C:\Users\RBHIWRE\eclipse-workspace\blinkit1\src\test\java\pageobject\HomePage.java
-C:\Users\RBHIWRE\eclipse-workspace\blinkit1\src\test\java\runner\TestRunner.java
-C:\Users\RBHIWRE\eclipse-workspace\blinkit1\src\test\java\utility\ScreenshotGenerator.java
-C:\Users\RBHIWRE\eclipse-workspace\blinkit1\src\test\java\steps\Tc1_Homepage.java
-C:\Users\RBHIWRE\eclipse-workspace\blinkit1\src\test\java\pageobject\Product.java
-C:\Users\RBHIWRE\eclipse-workspace\blinkit1\src\test\java\steps\Tc2_SelectProduct.java
-C:\Users\RBHIWRE\eclipse-workspace\blinkit1\src\test\java\utility\ReportGenertor.java
+C:\Ranjith training\git\TestingBlinkit\src\test\java\pageobject\Login.java
+C:\Ranjith training\git\TestingBlinkit\src\test\java\pageobject\Product.java
+C:\Ranjith training\git\TestingBlinkit\src\test\java\steps\Tc1_Homepage.java
+C:\Ranjith training\git\TestingBlinkit\src\test\java\runner\TestRunner.java
+C:\Ranjith training\git\TestingBlinkit\src\test\java\pageobject\HomePage.java
+C:\Ranjith training\git\TestingBlinkit\src\test\java\steps\Tc2_Login.java
+C:\Ranjith training\git\TestingBlinkit\src\test\java\utility\ScreenshotGenerator.java
+C:\Ranjith training\git\TestingBlinkit\src\test\java\utility\Initialize.java
+C:\Ranjith training\git\TestingBlinkit\src\test\java\utility\ReportGenertor.java
+C:\Ranjith training\git\TestingBlinkit\src\test\java\steps\Tc3_SelectProduct.java
