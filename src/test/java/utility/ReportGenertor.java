@@ -13,7 +13,7 @@ public class ReportGenertor {
 	public static int i = 1;
 
 	public void startReport() {
-		extent = new ExtentReports("C:\\Users\\RBHIWRE\\eclipse-workspace\\blinkit1\\reports\\blinkit.html", true);
+		extent = new ExtentReports("C:\\Ranjith training\\git\\TestingBlinkit\\reports\\blinkit.html", true);
 	}
 
 	public void startTest(String message) {
@@ -27,6 +27,14 @@ public class ReportGenertor {
 
 		} else {
 			logger.log(LogStatus.PASS, "Test is pass");
+		}
+	}
+
+	public void getResult(String acResult, String exResult) {
+		if (acResult.equals(exResult)) {
+			logger.log(LogStatus.PASS, "Test is pass");
+		} else {
+			logger.log(LogStatus.FAIL, "Test is failed");
 		}
 	}
 

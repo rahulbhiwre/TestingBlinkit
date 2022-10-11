@@ -1,4 +1,4 @@
-package pageobject;
+package pagefactory;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -37,7 +37,7 @@ public class HomePage {
 	public Boolean detectLocation() throws InterruptedException, IOException {
 		detectLocationButton.click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		// driver.findElement(By.xpath("//a[text()='Ahmedabad']")).click();
+		driver.findElement(By.xpath("//a[text()='Ahmedabad']")).click();
 		ScreenshotGenerator.takeScreenshot(driver);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		return login.isDisplayed();
