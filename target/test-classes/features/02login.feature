@@ -13,4 +13,5 @@ Then user will see verfication failed message
 Examples:
 |mobileNumber|
 |7904654159|
+|7218050140|
 
