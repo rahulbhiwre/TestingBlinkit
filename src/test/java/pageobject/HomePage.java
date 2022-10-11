@@ -1,7 +1,9 @@
 package pageobject;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,12 +16,12 @@ public class HomePage {
 	@FindBy(className = "location-box")
 	WebElement detectLocationButton;
 
-	@FindBy(xpath = "//*[@id=\\\"app\\\"]/div/div/div[1]/header/div[3]/div[1]/div")
+	@FindBy(className = "bFHCDW")
 	WebElement login;
-	
+
 	@FindBy(xpath = "/html/body/div[5]/div/div/div/div[2]/form/div/input")
 	WebElement mobileNo;
-	
+
 	public WebDriver driver;
 
 	public HomePage(WebDriver driver) {
@@ -32,19 +34,14 @@ public class HomePage {
 		ScreenshotGenerator.takeScreenshot(driver);
 	}
 
-	public void detectLocation() throws InterruptedException, IOException {
+	public Boolean detectLocation() throws InterruptedException, IOException {
 		detectLocationButton.click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		// driver.findElement(By.xpath("//a[text()='Ahmedabad']")).click();
 		ScreenshotGenerator.takeScreenshot(driver);
-		Thread.sleep(9000);
-	}
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		return login.isDisplayed();
 
-	public void clickLogin() {
-		login.click();
-		
-	}
-	
-	public void enterMobile() {
-		mobileNo.sendKeys("");
 	}
 
 }

@@ -1,7 +1,9 @@
 package pageobject;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,13 +25,15 @@ public class Product {
 
 	public void getProductLink() throws IOException {
 		driver.get("https://blinkit.com/cn/bakery-biscuits/cookies/cid/888/28");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		ScreenshotGenerator.takeScreenshot(driver);
 
 	}
 
-	public void clickCookies() throws IOException {
+	public boolean clickCookies() throws IOException {
 		cookies.click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		ScreenshotGenerator.takeScreenshot(driver);
-
+		return driver.findElement(By.className("kPXfrg")).isDisplayed();
 	}
 }

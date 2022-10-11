@@ -1,5 +1,6 @@
 Feature: Access Homepage
 
+@homepage
 Scenario: To verify the URL for blinkit on Google browser. 
 Given user is in the blinkit website 
 When user selects the detect location
