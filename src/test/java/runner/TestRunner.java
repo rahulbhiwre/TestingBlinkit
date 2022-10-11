@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 //
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src//test//java//features", glue= {"steps"},tags="@ValidLogin")
+@CucumberOptions(features="src//test//java//features", glue= {"steps"})
 public class TestRunner {
 
 }

@@ -10,13 +10,13 @@ import io.cucumber.java.en.When;
 import pageobject.Product;
 import utility.Initialize;
 
-public class Tc2_SelectProduct extends Initialize {
+public class Tc3_SelectProduct extends Initialize {
 
 	public static Product product;
 	public static boolean result;
 
 
-	public Tc2_SelectProduct() {
+	public Tc3_SelectProduct() {
 		super();
 	}
 
