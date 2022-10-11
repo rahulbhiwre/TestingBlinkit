@@ -1,5 +1,7 @@
 package steps;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 
 import io.cucumber.java.en.Given;
@@ -11,6 +13,8 @@ import utility.Initialize;
 public class Tc2_SelectProduct extends Initialize {
 
 	public static Product product;
+	public static boolean result;
+
 
 	public Tc2_SelectProduct() {
 		super();
@@ -25,11 +29,13 @@ public class Tc2_SelectProduct extends Initialize {
 
 	@When("user selects the product")
 	public void user_selects_the_detect_location() throws InterruptedException, IOException {
-		product.clickCookies();
+		result = product.clickCookies();
 	}
 
 	@Then("user will able to see product details")
 	public void user_will_redirected_to_homepage() {
+		assertEquals(true, result);
+		report.getResult(result);
 		report.endTest();
 		report.endReport();
 		driver.quit();

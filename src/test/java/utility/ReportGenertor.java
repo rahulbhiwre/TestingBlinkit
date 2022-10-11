@@ -1,5 +1,7 @@
 package utility;
 
+import org.testng.ITestResult;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -11,14 +13,21 @@ public class ReportGenertor {
 	public static int i = 1;
 
 	public void startReport() {
-		extent = new ExtentReports("C:\\Users\\RBHIWRE\\eclipse-workspace\\blinkit1\\reports\\blinkit.html",
-				true);
+		extent = new ExtentReports("C:\\Users\\RBHIWRE\\eclipse-workspace\\blinkit1\\reports\\blinkit.html", true);
 	}
 
 	public void startTest(String message) {
-		logger = extent.startTest("test" + i);
-		logger.log(LogStatus.PASS, message);
+		logger = extent.startTest(" test " + i + " " + message);
 		i++;
+	}
+
+	public void getResult(boolean result) {
+		if (!result) {
+			logger.log(LogStatus.FAIL, "Test is failed");
+
+		} else {
+			logger.log(LogStatus.PASS, "Test is pass");
+		}
 	}
 
 	public void endTest() {
@@ -30,5 +39,4 @@ public class ReportGenertor {
 		extent.close();
 	}
 
-	
 }
