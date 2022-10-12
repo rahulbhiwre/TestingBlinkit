@@ -7,8 +7,8 @@ import java.io.IOException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pageobject.HomePage;
-import pageobject.Login;
+import pagefactory.HomePage;
+import pagefactory.Login;
 import utility.Initialize;
 
 public class Tc3_InvalidLogin extends Initialize{
