@@ -33,6 +33,7 @@ public class Login {
 	}
 	
 	public void clickLogin() throws IOException {
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		loginButton.click();
 		ScreenshotGenerator.takeScreenshot(driver);
 	}
@@ -43,10 +44,18 @@ public class Login {
 		submitMobileNumberButton.click();
 		ScreenshotGenerator.takeScreenshot(driver);
 	}
-	public String clickNext() throws IOException {
+	public String validClickNext() throws IOException {
+		String result="";
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(submitMobileNumberButton)).click();
 		ScreenshotGenerator.takeScreenshot(driver);
 		return driver.findElement(By.className("bFHCDW")).getText();
+	}
+	public String invalidClickNext() throws IOException {
+		String result="";
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.elementToBeClickable(submitMobileNumberButton)).click();
+		ScreenshotGenerator.takeScreenshot(driver);
+		return driver.findElement(By.className("modal-error")).getText();
 	}
 }
