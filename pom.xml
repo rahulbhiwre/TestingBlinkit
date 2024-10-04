@@ -67,7 +67,7 @@
 		<dependency>
 			<groupId>net.masterthought</groupId>
 			<artifactId>cucumber-reporting</artifactId>
-			<version>5.7.2</version>
+			<version>5.8.0</version>
 		</dependency>
 
 
@@ -121,13 +121,13 @@
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>5.2.3</version>
+			<version>5.2.5</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>5.2.3</version>
+			<version>5.2.5</version>
 		</dependency>
 
 
